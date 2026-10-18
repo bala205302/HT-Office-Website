@@ -1,0 +1,2806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HT Office Automation | Photocopiers, Printers & Office Equipment</title>
+  <meta name="description" content="HT Office Automation provides reliable photocopiers, Xerox machines, multifunction printers, document scanners, toner supplies, rentals, and maintenance services.">
+  <meta name="keywords" content="photocopiers, Xerox machines, office automation, laser printers, multifunction printers, printer rental, copier repair, toner cartridges">
+  <meta name="author" content="HT Office Automation">
+
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="HT Office Automation | Smart Printing & Office Solutions">
+  <meta property="og:description" content="Commercial photocopiers, printers, document scanners, rentals, and prompt repair services for businesses.">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME SETUP
+       Corporate Dark Blue, White, Light Grey with Cyan Accent
+       ========================================================================== */
+    :root {
+      --primary: #0f2b48;          /* Corporate Dark Blue */
+      --primary-dark: #0a1c30;     /* Deeper Navy for header/footer */
+      --primary-light: #1b4066;    /* Medium Navy */
+      --accent: #0284c7;           /* Vibrant Modern Blue / Cyan Accent */
+      --accent-hover: #0369a1;     /* Darker Accent for active/hover */
+      --accent-subtle: #e0f2fe;    /* Soft cyan tint */
+      --accent-warm: #f59e0b;      /* Subtle Warm Amber for badges/highlights */
+      --bg-body: #f8fafc;          /* Light Grey / Off-white background */
+      --bg-card: #ffffff;          /* Pure White for cards & forms */
+      --text-main: #1e293b;        /* Slate 800 - High legibility dark text */
+      --text-muted: #64748b;       /* Slate 500 - Secondary text */
+      --border: #e2e8f0;           /* Clean slate border */
+      --border-focus: #0284c7;     /* Input focus border */
+      --success-bg: #ecfdf5;       /* Green tint for success */
+      --success-text: #065f46;
+      --success-border: #a7f3d0;
+      --error-bg: #fef2f2;         /* Red tint for errors */
+      --error-text: #991b1b;
+      --error-border: #fecaca;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 20px 25px -5px rgba(15, 43, 72, 0.12), 0 8px 10px -6px rgba(15, 43, 72, 0.06);
+      --transition: all 0.25s ease-in-out;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-py {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background-color: var(--accent-subtle);
+      color: var(--accent-hover);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Button System */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff !important;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--primary);
+      color: #ffffff !important;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary-light);
+      box-shadow: 0 4px 12px rgba(15, 43, 72, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      background-color: transparent;
+      color: #ffffff !important;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .btn-outline-white:hover {
+      background-color: #ffffff;
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-primary {
+      background-color: transparent;
+      color: var(--primary) !important;
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--primary);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #ffffff !important;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1eb954;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 0.55rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    /* ==========================================================================
+       TOP BAR (Quick Contact & Business Hours)
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--primary-dark);
+      color: #cbd5e1;
+      font-size: 0.8125rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .top-bar-items {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #cbd5e1;
+    }
+
+    .top-bar-item a {
+      color: #e2e8f0;
+    }
+
+    .top-bar-item a:hover {
+      color: #38bdf8;
+    }
+
+    .top-bar-item svg {
+      width: 14px;
+      height: 14px;
+      color: #38bdf8;
+    }
+
+    /* ==========================================================================
+       STICKY NAVIGATION BAR
+       ========================================================================== */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    /* Logo Styling */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-icon-box {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Navigation Links */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.75rem;
+    }
+
+    .nav-link {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--text-main);
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Hamburger Button */
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+
+    .mobile-toggle svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(145deg, #0a1f36 0%, #0f2b48 60%, #153c64 100%);
+      color: #ffffff;
+      padding: 5rem 0 5.5rem 0;
+      overflow: hidden;
+    }
+
+    /* Subtle background grid pattern */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #7dd3fc;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      color: #38bdf8;
+    }
+
+    .hero-subheading {
+      font-size: 1.1875rem;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-intro {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-highlight-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-highlight-number {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero-highlight-label {
+      font-size: 0.775rem;
+      color: #94a3b8;
+      margin-top: 0.2rem;
+    }
+
+    /* Hero Image Container with Card Effect */
+    .hero-visual-wrapper {
+      position: relative;
+    }
+
+    .hero-img-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 0.75rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: calc(var(--radius-lg) - 4px);
+      transition: var(--transition);
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: -1.25rem;
+      left: -1.25rem;
+      background: #ffffff;
+      color: var(--text-main);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-left: 4px solid var(--accent);
+      max-width: 260px;
+    }
+
+    .hero-floating-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--accent-subtle);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-floating-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .hero-floating-text h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .hero-floating-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       WHY CHOOSE US SECTION
+       ========================================================================== */
+    .why-section {
+      background-color: #ffffff;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+
+    .feature-card {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card:hover {
+      background-color: #ffffff;
+      border-color: #cbd5e1;
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background-color: var(--accent-subtle);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      transition: var(--transition);
+    }
+
+    .feature-card:hover .feature-icon-box {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .feature-icon-box svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .feature-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       PRODUCTS & SERVICES SECTION
+       ========================================================================== */
+    .products-section {
+      background-color: var(--bg-body);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background-color: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .product-image-wrap {
+      position: relative;
+      height: 190px;
+      background-color: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.05);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(15, 43, 72, 0.88);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .product-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+
+    .product-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .product-features-list {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      border-top: 1px dashed var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .product-features-list li {
+      font-size: 0.8rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .product-features-list svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .product-btn {
+      width: 100%;
+      background-color: var(--bg-body);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .product-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover .product-btn {
+      background-color: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    .product-card:hover .product-btn svg {
+      transform: translateX(3px);
+    }
+
+    /* ==========================================================================
+       ABOUT US SECTION
+       ========================================================================== */
+    .about-section {
+      background-color: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-img-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+
+    .about-img-box img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .about-overlay-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      max-width: 240px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .about-overlay-badge h4 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #38bdf8;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .about-overlay-badge p {
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      line-height: 1.35;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Editable Placeholders Box */
+    .placeholders-panel {
+      background-color: var(--bg-body);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .placeholders-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .placeholders-header svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .placeholder-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .placeholder-row:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .placeholder-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .placeholder-value {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      background-color: #ffffff;
+      padding: 0.35rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+      display: inline-block;
+      font-family: inherit;
+    }
+
+    /* ==========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ) SECTION
+       ========================================================================== */
+    .faq-section {
+      background-color: var(--bg-body);
+    }
+
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: #cbd5e1;
+    }
+
+    .faq-item.active {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease-out, padding 0.35s ease;
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+
+    /* ==========================================================================
+       CALL TO ACTION (CTA) BANNER
+       ========================================================================== */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #ffffff;
+      padding: 3.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-text {
+      max-width: 650px;
+    }
+
+    .cta-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .cta-desc {
+      font-size: 1rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       CONTACT & ENQUIRY SECTION
+       ========================================================================== */
+    .contact-section {
+      background-color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 3.5rem;
+    }
+
+    /* Contact Details Card */
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .contact-card {
+      background: var(--bg-body);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+    }
+
+    .contact-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-method:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background-color: #ffffff;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-details h5 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-details p, .contact-details a {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .contact-details a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Google Map Placeholder Card */
+    .map-placeholder-card {
+      background: var(--bg-body);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .map-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .map-header svg {
+      width: 18px;
+      height: 18px;
+      color: #ef4444;
+    }
+
+    .map-box {
+      height: 180px;
+      background: #e2e8f0;
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 1rem;
+      border: 1px dashed #94a3b8;
+    }
+
+    .map-box svg {
+      width: 32px;
+      height: 32px;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Enquiry Form Styling */
+    .form-wrapper {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-header {
+      margin-bottom: 1.75rem;
+    }
+
+    .form-header h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-header p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Alert Banner Container */
+    #form-alert {
+      display: none;
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    #form-alert.success {
+      display: block;
+      background-color: var(--success-bg);
+      color: var(--success-text);
+      border: 1px solid var(--success-border);
+    }
+
+    #form-alert.error {
+      display: block;
+      background-color: var(--error-bg);
+      color: var(--error-text);
+      border: 1px solid var(--error-border);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-label .required {
+      color: #ef4444;
+      font-weight: 700;
+    }
+
+    .form-label .optional {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: normal;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.925rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background-color: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .form-control.is-invalid {
+      border-color: #ef4444;
+      background-color: #fffaf0;
+    }
+
+    .field-error {
+      font-size: 0.775rem;
+      color: #ef4444;
+      margin-top: 0.35rem;
+      display: none;
+      font-weight: 500;
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-reset {
+      background-color: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-reset:hover {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+    }
+
+    .static-demo-note {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--primary-dark);
+      color: #cbd5e1;
+      padding-top: 4.5rem;
+      padding-bottom: 2rem;
+      border-top: 3px solid var(--accent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-brand .logo-title {
+      color: #ffffff;
+    }
+
+    .footer-brand .logo-subtitle {
+      color: #94a3b8;
+    }
+
+    .footer-desc {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 1.25rem 0;
+    }
+
+    .footer-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-heading::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      font-size: 0.875rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer-links a:hover {
+      color: #38bdf8;
+      transform: translateX(4px);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      color: #38bdf8;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .footer-contact-item a {
+      color: #e2e8f0;
+    }
+
+    .footer-contact-item a:hover {
+      color: #38bdf8;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: #94a3b8;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: #25D366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.55);
+      color: #ffffff;
+    }
+
+    .floating-whatsapp svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .hero-visual-wrapper {
+        max-width: 540px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        display: none; /* Keep clean on small mobile devices */
+      }
+      .nav-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.25rem;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--border);
+        display: none;
+      }
+      .nav-menu.open {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-cta .btn {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.25rem;
+      }
+      .hero-highlights {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .about-overlay-badge {
+        position: static;
+        margin-top: 1rem;
+        max-width: 100%;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+      .cta-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features-grid, .products-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
+      .section-title {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP BAR (Direct Contacts & Working Hours)
+       ======================================================================== -->
+  <aside class="top-bar" aria-label="Quick Contacts">
+    <div class="container top-bar-inner">
+      <div class="top-bar-items">
+        <div class="top-bar-item">
+          <!-- Phone Icon SVG -->
+          <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+          </svg>
+          <span>Call Support: <a href="tel:+919876543210">+91 98765 43210</a></span>
+        </div>
+        <div class="top-bar-item">
+          <!-- Email Icon SVG -->
+          <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          <span>Email: <a href="mailto:info@example.com">contact@htofficeautomation.com</a></span>
+        </div>
+      </div>
+      <div class="top-bar-items">
+        <div class="top-bar-item">
+          <!-- Clock Icon SVG -->
+          <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="main-nav" id="navbar">
+    <div class="container nav-container">
+      <!-- Text-based Logo -->
+      <a href="#hero" class="logo-container" aria-label="HT Office Automation Homepage">
+        <div class="logo-icon-box" aria-hidden="true">HT</div>
+        <div class="logo-text-group">
+          <span class="logo-title">HT Office Automation</span>
+          <span class="logo-subtitle">Printing & Copier Solutions</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+          <li><a href="#products" class="nav-link">Products & Services</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Hamburger -->
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary btn-sm">Enquire Now</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <!-- Hamburger SVG -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Commercial Printing & Copier Specialists
+          </div>
+
+          <h1 class="hero-title">
+            Smart Printing & <span>Office Automation</span> Solutions
+          </h1>
+
+          <p class="hero-subheading">
+            Reliable photocopiers, printers, and office equipment to keep your business productive.
+          </p>
+
+          <p class="hero-intro">
+            At <strong>HT Office Automation</strong>, we deliver dependable printing machinery, flexible photocopier leasing plans, authentic consumable supplies, and rapid technical maintenance tailored to modern corporate workspaces.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">
+              <span>Explore Our Products</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline-white">
+              <span>Contact Us</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-number">Xerox & Copiers</span>
+              <span class="hero-highlight-label">A3/A4 Multi-function</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-number">Rental & Lease</span>
+              <span class="hero-highlight-label">Cost-Effective Plans</span>
+            </div>
+            <div class="hero-highlight-item">
+              <span class="hero-highlight-number">Prompt Support</span>
+              <span class="hero-highlight-label">Repairs & Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-img-card">
+            <!-- Free-to-use office multifunction photocopier photo from Unsplash -->
+            <img 
+              src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=1000&q=80" 
+              alt="High volume commercial multifunction photocopier machine in modern corporate office"
+              loading="eager"
+            >
+          </div>
+          <!-- Floating Feature Badge -->
+          <div class="hero-floating-card">
+            <div class="hero-floating-icon">
+              <!-- Printer Icon SVG -->
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zM9 9V5a2 2 0 012-2h2a2 2 0 012 2v4"/>
+              </svg>
+            </div>
+            <div class="hero-floating-text">
+              <h4>Tested Equipment</h4>
+              <p>Thoroughly inspected for continuous, jam-free document printing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WHY CHOOSE US SECTION
+       ======================================================================== -->
+  <section class="section-py why-section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Why Choose Us</span>
+        <h2 class="section-title">Built on Reliability & Office Efficiency</h2>
+        <p class="section-subtitle">
+          We understand that printer downtime halts paperwork and business flow. Here is why companies count on HT Office Automation.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Reliability -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <!-- Shield Check SVG -->
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Reliability First</h3>
+          <p class="feature-desc">
+            Dependable, commercial-grade equipment rigorously checked for heavy workloads, minimal downtime, and clean print outputs.
+          </p>
+        </div>
+
+        <!-- Feature 2: Product Guidance -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <!-- Lightbulb / Guidance SVG -->
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Product Guidance</h3>
+          <p class="feature-desc">
+            We evaluate your monthly print volume, paper format needs (A3/A4), and speed requirements to suggest the most cost-effective machine.
+          </p>
+        </div>
+
+        <!-- Feature 3: Service Support -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <!-- Wrench / Tools SVG -->
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Prompt Service Support</h3>
+          <p class="feature-desc">
+            Responsive on-call troubleshooting, periodic preventative check-ups, and genuine spare parts replacement by trained technicians.
+          </p>
+        </div>
+
+        <!-- Feature 4: Flexible Solutions -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <!-- Currency / Options SVG -->
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Flexible Solutions</h3>
+          <p class="feature-desc">
+            Choose between direct outright machine purchase, short-term project rentals, or long-term operational leases tailored to your budget.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRODUCTS & SERVICES SECTION (8 Required Cards)
+       ======================================================================== -->
+  <section class="section-py products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Portfolio</span>
+        <h2 class="section-title">Products & Office Solutions</h2>
+        <p class="section-subtitle">
+          Explore our range of photocopying machines, high-speed printers, and end-to-end office automation support.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- 1. Xerox and Photocopier Machines -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1597852074816-d933c4d2b988?auto=format&fit=crop&w=600&q=80" 
+              alt="High speed Xerox photocopier machine for office document duplication"
+              loading="lazy"
+            >
+            <span class="product-tag">Hardware</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Xerox & Photocopier Machines</h3>
+            <p class="product-desc">
+              High-volume commercial copiers engineered for heavy-duty document duplication with duplexing, stapling, and sorting.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Crisp monochrome & vivid color
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                A3 & A4 versatile paper support
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('purchase', 'Xerox & Photocopier Machines')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. Multifunction Printers -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80" 
+              alt="Multifunction all-in-one printer in enterprise office"
+              loading="lazy"
+            >
+            <span class="product-tag">All-In-One</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Multifunction Printers (MFP)</h3>
+            <p class="product-desc">
+              All-in-one devices consolidating printing, copying, scanning, and digital document distribution into a single desktop or floor hub.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Network LAN & Wi-Fi printing
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Scan-to-email & cloud workflow
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('purchase', 'Multifunction Printers (MFP)')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. Laser Printers -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=600&q=80" 
+              alt="Compact high speed desktop laser printer"
+              loading="lazy"
+            >
+            <span class="product-tag">Laser Tech</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Laser Printers</h3>
+            <p class="product-desc">
+              Fast, sharp, and cost-effective laser printing units perfect for administrative desks, accounts departments, and legal offices.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Rapid first-page out times
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Low cost-per-page operation
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('purchase', 'Laser Printers')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Document Scanners -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80" 
+              alt="High volume automatic document feeder scanner for digital archiving"
+              loading="lazy"
+            >
+            <span class="product-tag">Digitization</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Document Scanners</h3>
+            <p class="product-desc">
+              Dedicated high-speed sheet-fed and flatbed document scanners designed for record archiving, PDF indexing, and legal digitization.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Automatic document feeder (ADF)
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Double-sided duplex scan in one pass
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('purchase', 'Document Scanners')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Photocopier Rental and Leasing -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" 
+              alt="Corporate office space utilizing rented photocopier equipment"
+              loading="lazy"
+            >
+            <span class="product-tag">Rental Plan</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Photocopier Rental & Leasing</h3>
+            <p class="product-desc">
+              Zero heavy capital expenditure. Get modern photocopiers on convenient monthly rental packages with servicing and toner included.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Flexible monthly/quarterly contracts
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Free maintenance & toner assistance
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('rental', 'Photocopier Rental and Leasing')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 6. Printer & Photocopier Servicing -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" 
+              alt="Technician repairing laser printer roller mechanism"
+              loading="lazy"
+            >
+            <span class="product-tag">Repairs</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Printer & Copier Servicing</h3>
+            <p class="product-desc">
+              Expert diagnosis and fast on-site repair for paper jams, print lines, code errors, drum replacements, and roller failures.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Fast turnaround on-site visits
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Experienced component technicians
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('service', 'Printer and Photocopier Servicing')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 7. Toner and Cartridge Supplies -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&w=600&q=80" 
+              alt="Black and colour toner cartridges for office laser copiers"
+              loading="lazy"
+            >
+            <span class="product-tag">Consumables</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Toner & Cartridge Supplies</h3>
+            <p class="product-desc">
+              Reliable, high-yield black and colour toner cartridges, drums, and developer powder ensuring high page yields and dark text.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Optimum page yield guarantees
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Safe for printhead and drum life
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('toner', 'Toner and Cartridge Supplies')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 8. Office Equipment Maintenance -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" 
+              alt="Regular maintenance checklist inspection for office machinery"
+              loading="lazy"
+            >
+            <span class="product-tag">AMC / Care</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Equipment Maintenance (AMC)</h3>
+            <p class="product-desc">
+              Annual Maintenance Contracts (AMC) and preventative service schedules to extend machine lifespan and prevent sudden breakdowns.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Scheduled cleaning & calibration
+              </li>
+              <li>
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                Priority emergency dispatch
+              </li>
+            </ul>
+            <button type="button" class="product-btn" onclick="prefillEnquiry('service', 'Office Equipment Maintenance (AMC)')">
+              <span>Enquire Now</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT US SECTION (With Editable Placeholders)
+       ======================================================================== -->
+  <section class="section-py about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-box">
+            <!-- Free-to-use professional corporate office image -->
+            <img 
+              src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" 
+              alt="Modern corporate office printing environment supported by HT Office Automation"
+              loading="lazy"
+            >
+          </div>
+          <div class="about-overlay-badge">
+            <h4>Focused Support</h4>
+            <p>Helping organizations simplify paperwork with modern copiers and printers.</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="badge">About Our Company</span>
+          <h2 class="section-title">Dedicated to Streamlined Office Automation</h2>
+          
+          <p class="about-text">
+            <strong>HT Office Automation</strong> is a specialized provider of workplace printing, copying, and scanning equipment. We partner with businesses, educational institutes, legal chambers, and commercial enterprises to select, deploy, and maintain dependable machinery that matches their daily document workload.
+          </p>
+
+          <p class="about-text">
+            Rather than offering generic sales, our approach centers on understanding your document workflow: calculating average monthly page volumes, assessing network security requirements, and recommending whether purchasing, renting, or leasing makes the most financial sense.
+          </p>
+
+          <!-- Fully Editable Placeholders Panel -->
+          <div class="placeholders-panel">
+            <div class="placeholders-header">
+              <!-- Info Circle SVG -->
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <span>Editable Company Information</span>
+            </div>
+
+            <div class="placeholder-row">
+              <span class="placeholder-label">Industry Experience:</span>
+              <span class="placeholder-value">[Insert Years of Industry Experience, e.g., 10+ Years of Field Expertise]</span>
+            </div>
+
+            <div class="placeholder-row">
+              <span class="placeholder-label">Service & Delivery Locations:</span>
+              <span class="placeholder-value">[Insert Primary Service Areas, e.g., Serving Metro City & Surrounding Industrial Hubs]</span>
+            </div>
+
+            <div class="placeholder-row">
+              <span class="placeholder-label">Customer Support Availability:</span>
+              <span class="placeholder-value">[Insert Support Hours, e.g., Monday to Saturday, 9:00 AM – 7:00 PM IST]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ) SECTION
+       ======================================================================== -->
+  <section class="section-py faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Find clear answers regarding photocopier selection, rental terms, servicing response, and toner cartridge compatibility.
+        </p>
+      </div>
+
+      <div class="faq-wrapper">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question" type="button" aria-expanded="true">
+            <span>How do I decide between purchasing or renting a photocopier?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Purchasing is ideal for organizations with permanent requirements, predictable long-term budgets, and available upfront capital. Renting or leasing is popular with growing firms, temporary project offices, and businesses wishing to avoid capital expenditure because monthly plans include servicing, drum replacements, and toner support without surprise bills.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What is included in your photocopier rental plans?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Our rental arrangements typically include machine delivery, setup, network configuration, scheduled routine servicing, replacement of worn parts, and free toner replenishment based on your contracted monthly print quota. You only provide paper and electricity.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How quickly can a service technician attend to a machine breakdown?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              For clients within our primary service zones, we prioritize fast dispatch. Routine service calls are typically addressed within standard business working hours. We keep standard spares readily available to resolve paper jams, error codes, and roller replacements on the first visit.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do you provide toner supplies for both black-and-white and color copiers?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes. We provide compatible and high-yield toner cartridges for all standard monochrome and color multifunction printers and photocopiers. All supplies are verified to produce clean printouts without damaging the machine's internal imaging units.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What is covered under an Annual Maintenance Contract (AMC)?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              An AMC covers regular preventative visits (cleaning optical mirrors, lubricating gear mechanisms, cleaning paper path rollers), priority breakdown response, and optical calibration to ensure your equipment operates at peak efficiency year-round.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How do I get a price quotation for our company's requirements?</span>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Simply fill out our enquiry form below or click the WhatsApp button. Provide your estimated monthly volume (e.g. 5,000 pages), whether you need A3 or A4, and if color is required. We will prepare an itemized quote with transparent purchase and rental options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CALL TO ACTION (CTA) BANNER
+       ======================================================================== -->
+  <section class="cta-banner" aria-label="Quick Quotation Call to Action">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2 class="cta-title">Upgrade Your Office Printing Infrastructure Today</h2>
+          <p class="cta-desc">
+            Reduce per-page costs, eliminate paper jams, and get dependable equipment backed by friendly technical support.
+          </p>
+        </div>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary">Request a Free Quotation</a>
+          <!-- Direct WhatsApp Action Button -->
+          <a href="https://wa.me/919876543210?text=Hello%20HT%20Office%20Automation,%20I%20would%20like%20to%20request%20a%20quotation%20for%20office%20printers." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <!-- WhatsApp SVG -->
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2 1.057.94 1.341 1.059 1.515 1.145.173.086.274.072.375-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+            </svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CUSTOMER CONTACT & ENQUIRY SECTION
+       ======================================================================== -->
+  <section class="section-py contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Get In Touch</span>
+        <h2 class="section-title">Contact & Customer Enquiry</h2>
+        <p class="section-subtitle">
+          Have questions about equipment, leasing, servicing, or consumables? Reach out to our team or fill in the form below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Column: Business Details, Channels & Map Placeholder -->
+        <div class="contact-info-col">
+          <div class="contact-card">
+            <h3 class="contact-card-title">Direct Contact Information</h3>
+
+            <!-- Phone Number -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h5>Phone Support</h5>
+                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Clickable to dial directly</small>
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h5>Email Enquiries</h5>
+                <p><a href="mailto:contact@htofficeautomation.com">contact@htofficeautomation.com</a></p>
+                <small style="color: var(--text-muted); font-size: 0.75rem;">[Editable Email Placeholder]</small>
+              </div>
+            </div>
+
+            <!-- WhatsApp Number -->
+            <div class="contact-method">
+              <div class="contact-icon" style="color: #25D366;">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2 1.057.94 1.341 1.059 1.515 1.145.173.086.274.072.375-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h5>WhatsApp Enquiries</h5>
+                <p><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">+91 98765 43210</a></p>
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Instant quotation & technician chats</small>
+              </div>
+            </div>
+
+            <!-- Business Address -->
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h5>Business Address</h5>
+                <p>[Shop/Office No., Street Name, Commercial Complex, City, State - PIN Code]</p>
+                <small style="color: var(--text-muted); font-size: 0.75rem;">[Editable Physical Address Placeholder]</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Link Placeholder Card -->
+          <div class="map-placeholder-card">
+            <div class="map-header">
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Business Location Map</span>
+            </div>
+            <div class="map-box">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <p><strong>[Google Maps Embed Placeholder]</strong></p>
+              <p style="font-size: 0.75rem; margin-top: 0.25rem;">Insert your Google Maps iframe or link here.</p>
+            </div>
+            <!-- Google Maps link placeholder -->
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" style="width: 100%; margin-top: 0.25rem;">
+              <span>View On Google Maps</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Customer Enquiry Form -->
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h3>Send an Enquiry</h3>
+            <p>Fill out the form below. We will get back to you with guidance and quotations.</p>
+          </div>
+
+          <!-- Dynamic Alert Banner for Validation and Demo Mode Status -->
+          <div id="form-alert" role="alert"></div>
+
+          <form id="enquiry-form" novalidate>
+            <div class="form-row">
+              <!-- Customer Name (Required) -->
+              <div class="form-group">
+                <label for="cust-name" class="form-label">
+                  <span>Customer Name <span class="required">*</span></span>
+                </label>
+                <input 
+                  type="text" 
+                  id="cust-name" 
+                  name="customer_name" 
+                  class="form-control" 
+                  placeholder="e.g. Rajesh Kumar" 
+                  required
+                >
+                <span class="field-error" id="cust-name-error">Please enter your full name.</span>
+              </div>
+
+              <!-- Company Name (Optional) -->
+              <div class="form-group">
+                <label for="comp-name" class="form-label">
+                  <span>Company Name</span>
+                  <span class="optional">(Optional)</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="comp-name" 
+                  name="company_name" 
+                  class="form-control" 
+                  placeholder="e.g. Apex Enterprises Pvt Ltd"
+                >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <!-- Email Address (Required & Validated) -->
+              <div class="form-group">
+                <label for="cust-email" class="form-label">
+                  <span>Email Address <span class="required">*</span></span>
+                </label>
+                <input 
+                  type="email" 
+                  id="cust-email" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="name@company.com" 
+                  required
+                >
+                <span class="field-error" id="cust-email-error">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Mobile Number (Required & Indian Format Validated) -->
+              <div class="form-group">
+                <label for="cust-phone" class="form-label">
+                  <span>Mobile Number <span class="required">*</span></span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="cust-phone" 
+                  name="mobile" 
+                  class="form-control" 
+                  placeholder="10-digit Indian mobile (e.g. 9876543210)" 
+                  required
+                >
+                <span class="field-error" id="cust-phone-error">Enter a valid 10-digit Indian mobile number (e.g. 9876543210).</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <!-- Enquiry Type Dropdown -->
+              <div class="form-group">
+                <label for="enquiry-type" class="form-label">
+                  <span>Enquiry Type <span class="required">*</span></span>
+                </label>
+                <select id="enquiry-type" name="enquiry_type" class="form-control" required>
+                  <option value="" disabled selected>Select an enquiry type</option>
+                  <option value="purchase">Product Purchase (New / Refurbished)</option>
+                  <option value="rental">Photocopier Rental & Leasing</option>
+                  <option value="service">Service or Repair Request</option>
+                  <option value="toner">Toner & Cartridge Supplies</option>
+                  <option value="general">General Enquiry / Consultation</option>
+                </select>
+                <span class="field-error" id="enquiry-type-error">Please select an enquiry category.</span>
+              </div>
+
+              <!-- Product or Machine Model (Optional) -->
+              <div class="form-group">
+                <label for="machine-model" class="form-label">
+                  <span>Product / Machine Model</span>
+                  <span class="optional">(Optional)</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="machine-model" 
+                  name="machine_model" 
+                  class="form-control" 
+                  placeholder="e.g. A3 Colour Multifunction, Laser MFP..."
+                >
+              </div>
+            </div>
+
+            <!-- Message or Requirement (Required) -->
+            <div class="form-group full-width">
+              <label for="cust-message" class="form-label">
+                <span>Message or Requirement <span class="required">*</span></span>
+              </label>
+              <textarea 
+                id="cust-message" 
+                name="message" 
+                class="form-control" 
+                rows="4" 
+                placeholder="Describe your requirement (e.g. monthly expected print volume, monochrome vs color, lease duration, or service problem)..." 
+                required
+              ></textarea>
+              <span class="field-error" id="cust-message-error">Please share details of your requirement (minimum 10 characters).</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btn-submit">
+                <span>Submit Enquiry</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+              <button type="button" class="btn btn-reset" id="btn-reset">
+                <span>Reset Form</span>
+              </button>
+            </div>
+
+            <!-- Static Demo Disclaimer Notice -->
+            <div class="static-demo-note">
+              <strong>Notice:</strong> This is a static demonstration website. Forms are validated in real-time in your browser. Because no server or database is attached, submissions are simulated locally. You can easily connect this form to free services like FormSubmit, Web3Forms, or your server (see instructions below).
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <div class="logo-container" style="margin-bottom: 0.5rem;">
+            <div class="logo-icon-box" style="background: var(--accent);">HT</div>
+            <div class="logo-text-group">
+              <span class="logo-title">HT Office Automation</span>
+              <span class="logo-subtitle">Printing & Copier Solutions</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Your trusted provider of commercial Xerox copiers, multi-function laser printers, high-speed document scanners, toner consumables, and maintenance servicing.
+          </p>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2 1.057.94 1.341 1.059 1.515 1.145.173.086.274.072.375-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+            <span>Message on WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#products">Products & Services</a></li>
+            <li><a href="#about">About HT Office Automation</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#contact">Contact & Enquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Products List -->
+        <div>
+          <h4 class="footer-heading">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="#products" onclick="prefillEnquiry('purchase', 'Xerox & Photocopier Machines')">Xerox Copiers</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('purchase', 'Multifunction Printers (MFP)')">Multifunction Printers</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('purchase', 'Laser Printers')">Laser Printers</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('purchase', 'Document Scanners')">Document Scanners</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('rental', 'Photocopier Rental & Leasing')">Copier Rentals</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('service', 'Printer & Copier Servicing')">Machine Servicing</a></li>
+            <li><a href="#products" onclick="prefillEnquiry('toner', 'Toner & Cartridge Supplies')">Toner Cartridges</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Summary -->
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+            <div>
+              <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            <div>
+              <p>Email: <a href="mailto:contact@htofficeautomation.com">contact@htofficeautomation.com</a></p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <div>
+              <p>[Commercial Hub, City, State - PIN]</p>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            <div>
+              <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> <strong>HT Office Automation</strong>. All rights reserved.</p>
+        <p>Professional Office Automation & Commercial Printing Equipment.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING WHATSAPP ACTION BUTTON
+       ======================================================================== -->
+  <a 
+    href="https://wa.me/919876543210?text=Hello%20HT%20Office%20Automation,%20I%20have%20an%20enquiry%20regarding%20your%20office%20printers%20and%20copiers." 
+    class="floating-whatsapp" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    title="Chat with us on WhatsApp"
+    aria-label="Direct WhatsApp Enquiry"
+  >
+    <svg fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2 1.057.94 1.341 1.059 1.515 1.145.173.086.274.072.375-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+    </svg>
+  </a>
+
+  <!-- ========================================================================
+       EMBEDDED JAVASCRIPT
+       Interactive Navigation, FAQ Accordions, Prefill Logic, and Form Validation
+       ======================================================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Automatically Set Copyright Year
+      const yearSpan = document.getElementById("current-year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // 2. Mobile Navigation Toggle
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener("click", function () {
+          const isOpen = navMenu.classList.toggle("open");
+          mobileToggle.setAttribute("aria-expanded", isOpen);
+        });
+
+        // Close mobile nav when clicking any nav link
+        navMenu.querySelectorAll(".nav-link").forEach(function (link) {
+          link.addEventListener("click", function () {
+            navMenu.classList.remove("open");
+            mobileToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      // 3. FAQ Accordion Toggle Logic
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach(function (item) {
+        const questionBtn = item.querySelector(".faq-question");
+        questionBtn.addEventListener("click", function () {
+          const isActive = item.classList.contains("active");
+
+          // Close other accordion items
+          faqItems.forEach(function (otherItem) {
+            otherItem.classList.remove("active");
+            otherItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+          });
+
+          // Toggle current item
+          if (!isActive) {
+            item.classList.add("active");
+            questionBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      // 4. Contact Form Validation & Demo Simulation
+      const form = document.getElementById("enquiry-form");
+      const alertBox = document.getElementById("form-alert");
+      const resetBtn = document.getElementById("btn-reset");
+
+      // Input elements
+      const nameInput = document.getElementById("cust-name");
+      const emailInput = document.getElementById("cust-email");
+      const phoneInput = document.getElementById("cust-phone");
+      const typeSelect = document.getElementById("enquiry-type");
+      const messageInput = document.getElementById("cust-message");
+      const modelInput = document.getElementById("machine-model");
+      const companyInput = document.getElementById("comp-name");
+
+      // Validation helper functions
+      function validateEmail(email) {
+        // Standard email regex
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      function validateIndianPhone(phone) {
+        // Remove spaces, hyphens, and parenthesis
+        const cleaned = phone.replace(/[\s\-\(\)]/g, "");
+        // Valid formats: 10 digits starting with 6,7,8,9; or optionally prefixed with +91 or 0
+        const indianPhoneRegex = /^(?:\+91|0)?[6-9]\d{9}$/;
+        return indianPhoneRegex.test(cleaned);
+      }
+
+      function setFieldError(input, errorElementId, hasError) {
+        const errEl = document.getElementById(errorElementId);
+        if (hasError) {
+          input.classList.add("is-invalid");
+          if (errEl) errEl.style.display = "block";
+        } else {
+          input.classList.remove("is-invalid");
+          if (errEl) errEl.style.display = "none";
+        }
+      }
+
+      // Reset all error states
+      function clearAllErrors() {
+        setFieldError(nameInput, "cust-name-error", false);
+        setFieldError(emailInput, "cust-email-error", false);
+        setFieldError(phoneInput, "cust-phone-error", false);
+        setFieldError(typeSelect, "enquiry-type-error", false);
+        setFieldError(messageInput, "cust-message-error", false);
+        alertBox.className = "";
+        alertBox.style.display = "none";
+        alertBox.innerHTML = "";
+      }
+
+      // Live validation on blur
+      nameInput.addEventListener("blur", function () {
+        setFieldError(nameInput, "cust-name-error", nameInput.value.trim().length < 2);
+      });
+      emailInput.addEventListener("blur", function () {
+        setFieldError(emailInput, "cust-email-error", !validateEmail(emailInput.value.trim()));
+      });
+      phoneInput.addEventListener("blur", function () {
+        setFieldError(phoneInput, "cust-phone-error", !validateIndianPhone(phoneInput.value.trim()));
+      });
+      typeSelect.addEventListener("change", function () {
+        setFieldError(typeSelect, "enquiry-type-error", !typeSelect.value);
+      });
+      messageInput.addEventListener("blur", function () {
+        setFieldError(messageInput, "cust-message-error", messageInput.value.trim().length < 10);
+      });
+
+      // Handle Form Submit
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Perform validations
+        const isNameValid = nameInput.value.trim().length >= 2;
+        const isEmailValid = validateEmail(emailInput.value.trim());
+        const isPhoneValid = validateIndianPhone(phoneInput.value.trim());
+        const isTypeValid = typeSelect.value !== "";
+        const isMessageValid = messageInput.value.trim().length >= 10;
+
+        setFieldError(nameInput, "cust-name-error", !isNameValid);
+        setFieldError(emailInput, "cust-email-error", !isEmailValid);
+        setFieldError(phoneInput, "cust-phone-error", !isPhoneValid);
+        setFieldError(typeSelect, "enquiry-type-error", !isTypeValid);
+        setFieldError(messageInput, "cust-message-error", !isMessageValid);
+
+        if (!isNameValid || !isEmailValid || !isPhoneValid || !isTypeValid || !isMessageValid) {
+          alertBox.className = "error";
+          alertBox.innerHTML = `
+            <strong>Submission Incomplete:</strong> Please fix the highlighted fields in red before proceeding. Ensure a valid email and 10-digit Indian mobile number are provided.
+          `;
+          alertBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          return;
+        }
+
+        // Prepare encoded WhatsApp backup query string
+        const customerName = encodeURIComponent(nameInput.value.trim());
+        const companyName = encodeURIComponent(companyInput.value.trim() || "N/A");
+        const enquiryType = encodeURIComponent(typeSelect.options[typeSelect.selectedIndex].text);
+        const productModel = encodeURIComponent(modelInput.value.trim() || "Not specified");
+        const userMsg = encodeURIComponent(messageInput.value.trim());
+        const userPhone = encodeURIComponent(phoneInput.value.trim());
+        
+        const waText = `Hello HT Office Automation, my name is ${customerName} (Company: ${companyName}). I am interested in: ${enquiryType} - Model: ${productModel}. Requirement: ${userMsg}. My contact: ${userPhone}`;
+        const waLink = `https://wa.me/919876543210?text=${encodeURIComponent(waText)}`;
+
+        // Display Clear, Polished Demo Message (Explaining form is validated but static)
+        alertBox.className = "success";
+        alertBox.innerHTML = `
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div>
+              <strong style="font-size: 1.05rem;">✓ Validation Successful! (Demo Notice)</strong>
+            </div>
+            <p>
+              Thank you, <strong>${nameInput.value.trim()}</strong>! All your enquiry details have passed client-side validation.
+            </p>
+            <div style="background: rgba(6, 95, 70, 0.08); padding: 0.75rem; border-radius: 6px; font-size: 0.85rem; line-height: 1.45; border-left: 3px solid #059669;">
+              <strong>Note:</strong> Because this is a static HTML demonstration without a backend server or database, your enquiry was not submitted over the internet. You can easily connect this form to a free service like <code>FormSubmit.co</code> or forward this enquiry directly via WhatsApp below:
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="display: inline-flex;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.2 1.057.94 1.341 1.059 1.515 1.145.173.086.274.072.375-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+                <span>Click to Forward via WhatsApp Now</span>
+              </a>
+            </div>
+          </div>
+        `;
+
+        alertBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+
+      // Handle Reset Form Button
+      resetBtn.addEventListener("click", function () {
+        form.reset();
+        clearAllErrors();
+      });
+    });
+
+    // 5. Global helper function to prefill form from Product Cards
+    window.prefillEnquiry = function (typeValue, productName) {
+      const typeSelect = document.getElementById("enquiry-type");
+      const modelInput = document.getElementById("machine-model");
+      const messageInput = document.getElementById("cust-message");
+      const contactSection = document.getElementById("contact");
+
+      if (typeSelect && typeValue) {
+        typeSelect.value = typeValue;
+      }
+      if (modelInput && productName) {
+        modelInput.value = productName;
+      }
+      if (messageInput && productName) {
+        messageInput.value = `I am interested in getting a quotation and more details for: ${productName}.`;
+      }
+
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+        // Focus the name field with a slight delay after smooth scroll starts
+        setTimeout(function () {
+          const nameField = document.getElementById("cust-name");
+          if (nameField) nameField.focus();
+        }, 500);
+      }
+    };
+  </script>
+</body>
+</html>
